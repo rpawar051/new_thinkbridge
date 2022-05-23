@@ -1,0 +1,116 @@
+POST method
+input :
+-------
+{
+        "name": "VIVO Y13",
+        "description": "RAM: 8GB, ROM: 264GB, Super fast mobile",
+        "price": 20000.0,
+        "basic_fields": "best camera phone",
+        "product_quantity": 1
+}
+
+output:
+-------
+{
+    "status": "success",
+    "data": {
+        "id": 3,
+        "name": "VIVO Y13",
+        "description": "RAM: 8GB, ROM: 264GB, Super fast mobile",
+        "price": 20000.0,
+        "basic_fields": "best camera phone",
+        "product_quantity": 1
+    }
+}
+
+____________________________________________________________________
+GET  method
+
+127.0.0.1:8000/api/cart-items/1
+------------------------------------------------
+1 is id of the product
+------------------------------------------------
+output :-
+------
+{
+    "status": "success",
+    "data": {
+        "id": 1,
+        "name": "vivo y13",
+        "description": "RAM: 8GB, ROM: 128GB, Super fast mobile",
+        "price": 21000.0,
+        "basic_fields": "best camera phone",
+        "product_quantity": 1
+    }
+}
+
+______________________________________________________________________
+
+127.0.0.1:8000/api/cart-items/
+--------------------------------------
+
+return all data that can be inserted
+---------------------------------------------------
+output:-
+-------
+{
+    "status": "success",
+    "data": [
+        {
+            "id": 1,
+            "name": "vivo y13",
+            "description": "RAM: 8GB, ROM: 128GB, Super fast mobile",
+            "price": 21000.0,
+            "basic_fields": "best camera phone",
+            "product_quantity": 1
+        },
+        {
+            "id": 2,
+            "name": "vivo y15",
+            "description": "RAM: 4GB, ROM: 64GB, Super fast mobile",
+            "price": 10000.0,
+            "basic_fields": "best camera phone",
+            "product_quantity": 1
+        }
+    ]
+}
+---------------------------------------------------
+Patch methods :-
+---------------
+
+update operation performces
+----------------------------
+passing value:
+
+
+------------------------------------------
+http://127.0.0.1:8000/api/cart-items/2
+
+input :-
+-----
+{
+    "name": "Nokia 5.1 plus"
+}
+
+output:-
+-------
+{
+    "status": "success",
+    "data": {
+        "id": 2,
+        "name": "Nokia 5.1 plus",
+        "description": "RAM: 4GB, ROM: 64GB, Super fast mobile",
+        "price": 10000.0,
+        "basic_fields": "best camera phone",
+        "product_quantity": 1
+    }
+}
+
+------------------------------------------
+Delete method
+
+
+http://127.0.0.1:8000/api/cart-items/1
+
+delete the id 1 
+row data
